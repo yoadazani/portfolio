@@ -1,0 +1,121 @@
+.wrapper {
+    width: calc(100% - 2rem);
+    max-width: 69.375rem;
+    margin-inline: auto;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    color: var(--white);
+    min-height: 45rem;
+}
+
+.hero__content {
+    position: relative;
+    margin-top: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+.hero__content .hero__headline{
+    letter-spacing: 0.025em;
+    font-size: clamp(2.5rem, 1.5rem + 5vw, 5.5rem);
+}
+
+.hero__content .hero__headline > span {
+    text-decoration-line: underline;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
+    text-decoration-color: var(--green);
+}
+
+.hero__content .hero__description {
+    font-size: clamp(1rem, 0.9rem + 0.2vw, 1.125rem);
+    font-family: var(--font-medium);
+    color: var(--secondary);
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+    max-width: 45ch;
+}
+
+
+.hero__image > img {
+    width: auto;
+    max-width: 27.8125rem;
+    max-height: 45rem;
+
+    position: absolute;
+    top: -2.5rem;
+    right: 0;
+    z-index: -3;
+}
+
+
+.vector {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 1;
+}
+
+.circle {
+    position: absolute;
+    top: 521px;
+    right: 380px;
+    z-index: -1;
+}
+
+
+/* 992px */
+@media screen and (width <= 62rem) {
+    .hero {
+        min-height: 100%;
+    }
+
+    .hero__content {
+        gap: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .hero__image > img {right: -1rem}
+
+    .circle {
+        top: calc(383px - 150px);
+        right: -1rem;
+    }
+}
+
+/* 768px */
+@media (width < 48rem) {
+    .wrapper {padding: 0.5rem 0}
+}
+
+/* 720px */
+@media screen and (width <= 45rem) {
+
+    .hero__image > img {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .hero__content {
+        margin: 22rem 0 5rem 0;
+        margin-inline: auto;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero__content .hero__description {
+        max-width: 100%;
+    }
+
+    .circle {
+        top: calc(258px - 70px);
+        right: -1rem
+    }
+}
+

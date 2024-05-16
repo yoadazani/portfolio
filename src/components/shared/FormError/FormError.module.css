@@ -1,0 +1,17 @@
+.error {
+    position: relative;
+}
+
+.error__message {
+    color: var(--error);
+    font-size: 0.75rem;
+    float: right;
+}
+
+.error__icon {
+    color: var(--error);
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0;
+}

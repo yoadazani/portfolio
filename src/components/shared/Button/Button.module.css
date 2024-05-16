@@ -1,0 +1,15 @@
+.contact__me {
+    font-family: var(--font-medium);
+    font-size: clamp(1rem, 0.9rem + 0.2vw, 1.125rem);
+    text-transform: uppercase;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.094rem;
+    text-underline-offset: 8px;
+    text-decoration-color: var(--green);
+    transition: .5s;
+    letter-spacing: 0.144rem;
+}
+
+.contact__me:hover {
+    color: var(--green);
+}

@@ -1,0 +1,22 @@
+.card {
+    width: 100%;
+    min-width: 300px;
+    max-width: calc(100% / 3 - 1rem);
+    text-align: center;
+    padding: 1rem;
+}
+
+.card > h2 {
+    font-size: clamp(2rem, 1.66rem + 1.66vw, 3rem);
+    padding-bottom: 0.725rem;
+}
+
+.card > p {
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.094rem;
+    text-underline-offset: 8px;
+    text-decoration-color: var(--green);
+    color: var(--secondary);
+    font-family: var(--font-medium);
+    font-size: clamp(1rem, 0.96rem + 0.21vw, 1.125rem);
+}

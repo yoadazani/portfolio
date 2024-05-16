@@ -1,0 +1,38 @@
+.wrapper {
+    width: calc(100% - 2rem);
+    max-width: 69.375rem;
+    margin-inline: auto;
+    position: relative;
+}
+
+.divider {
+    border-top: 2px solid var(--secondary);
+    padding: 1rem 0;
+}
+
+.experiences {
+    position: relative;
+}
+
+.experiences__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.vector {
+    position: absolute;
+    bottom: -3rem;
+    right: 0;
+    z-index: -1;
+}
+
+/* 768px */
+@media (width < 48rem) {
+    .wrapper {
+        padding: 0.5rem 0;
+    }
+}
