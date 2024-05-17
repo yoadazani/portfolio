@@ -27,8 +27,7 @@ export const Hero = () => {
                     Nice to meet you! <br /> I'm <span>Yoad Azani</span>
                 </h1>
                 <p className={styles.hero__description}>
-                    With extensive programming experience since age 9, I've cultivated a
-                    fervent passion for machine learning.
+                    With extensive programming experience of 4 years,
                     Committed to continuous learning, I aspire to leverage my competencies in this field to eventually
                     build my career.
                 </p>
