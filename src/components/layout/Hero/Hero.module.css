@@ -21,7 +21,7 @@
     gap: 3.5rem;
 }
 
-.hero__content .hero__headline{
+.hero__content .hero__headline {
     letter-spacing: 0.025em;
     font-size: clamp(2.5rem, 1.5rem + 5vw, 5.5rem);
 }
@@ -47,6 +47,7 @@
     width: auto;
     max-width: 27.8125rem;
     max-height: 45rem;
+    filter: grayscale(100%) contrast(100%) brightness(100%);
 
     position: absolute;
     top: -2.5rem;
@@ -81,7 +82,9 @@
         padding-bottom: 1rem;
     }
 
-    .hero__image > img {right: -1rem}
+    .hero__image > img {
+        right: -1rem
+    }
 
     .circle {
         top: calc(383px - 150px);
@@ -91,7 +94,9 @@
 
 /* 768px */
 @media (width < 48rem) {
-    .wrapper {padding: 0.5rem 0}
+    .wrapper {
+        padding: 0.5rem 0
+    }
 }
 
 /* 720px */
