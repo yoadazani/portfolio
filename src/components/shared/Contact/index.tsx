@@ -7,14 +7,13 @@ import {contactFormSchema} from "@/Validations/contactForm.ts";
 import {FormError} from "@/components";
 
 import email_js from '@emailjs/browser';
-import {useState} from "react";
+import {toast, Toaster} from 'react-hot-toast'
 
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export const Contact = () => {
-    const [emailSent, setEmailSent] = useState(false);
 
     const {
         register,
@@ -30,7 +29,10 @@ export const Contact = () => {
         const response = await email_js.send(SERVICE_ID, TEMPLATE_ID, formData, {publicKey: PUBLIC_KEY});
 
         if (response.status === 200) {
-            setEmailSent(true);
+            toast.success('Email sent successfully!', {
+                position: 'bottom-right',
+                duration: 3000
+            });
         }
         reset();
     }
@@ -83,12 +85,9 @@ export const Contact = () => {
                     />
                     {errors.message && touchedFields && <FormError error_message={errors.message.message!}/>}
                 </div>
-
-                {
-                    emailSent && <p style={{color: "var(--green)"}}>Email sent successfully</p>
-                }
                 <button type="submit" className={styles.button}>Send message</button>
             </form>
+            <Toaster/>
         </div>
     );
 };
